@@ -27,6 +27,11 @@ library
     TypeFamilies
     UndecidableInstances
 
-  build-depends:    base >=4 && <5
+  build-depends:
+      appendmap
+    , base
+    , monoidal-containers
+    , reflex
+    , witherable
   hs-source-dirs:   src
   default-language: Haskell2010
