@@ -1,3 +1,3 @@
-# bytestring-aeson-orphans
+# monoid-map
 
-Aeson instances for ByteString, using base 64 encoding
+Newtype wrapper around 'Data.Map.Monoidal.MonoidalMap' that has a correct 'Group' instance.

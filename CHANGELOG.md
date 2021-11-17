@@ -1,5 +1,4 @@
-# Revision history for bytestring-aeson-orphans
+# Revision history for monoid-map
 
-## 0.1.0.0 -- YYYY-mm-dd
-
-* First version. Released on an unsuspecting world.
+## 2021-11-17
+* Added the code for Data.MonoidMap.
