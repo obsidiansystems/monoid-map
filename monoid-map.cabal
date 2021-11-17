@@ -29,7 +29,7 @@ library
 
   build-depends:
       appendmap
-    , base
+    , base >= 4.11.0 & < 5
     , monoidal-containers
     , reflex
     , witherable
