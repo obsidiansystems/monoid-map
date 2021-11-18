@@ -19,9 +19,11 @@ import Data.Map.Monoidal as Map
 import Data.Semigroup (Semigroup, (<>))
 import Reflex (Query, QueryResult, crop, Group(..), Additive)
 
+-- | Newtype wrapper around Data.Map.Monoidal.MonoidalMap
 newtype MonoidMap k v = MonoidMap { unMonoidMap :: MonoidalMap k v }
   deriving (Show, Eq, Ord, Foldable, Functor, Traversable, Filterable)
 
+-- | Convert a MonoidalMap into a MonoidMap
 monoidMap :: (Ord k, Eq v, Monoid v) => MonoidalMap k v -> MonoidMap k v
 monoidMap = MonoidMap . Map.filter (/= mempty)
 
