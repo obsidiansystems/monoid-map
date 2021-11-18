@@ -14,7 +14,6 @@
 module Data.MonoidMap where
 
 import Data.Witherable
-import Data.AppendMap
 import Data.Map.Monoidal (MonoidalMap)
 import Data.Map.Monoidal as Map
 import Data.Semigroup (Semigroup, (<>))
