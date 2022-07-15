@@ -33,6 +33,7 @@ library
     , monoidal-containers  ^>=0.6
     , reflex               ^>=0.8
     , witherable           >=0.3 && <0.5
+    , patch
 
   hs-source-dirs:   src
   default-language: Haskell2010
