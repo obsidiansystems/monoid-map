@@ -15,10 +15,11 @@
 module Data.MonoidMap where
 
 import Data.Witherable
+import Data.Semigroup.Commutative
 import Data.Map.Monoidal (MonoidalMap)
 import qualified Data.Map.Monoidal as Map
 import Data.Semigroup (Semigroup, (<>))
-import Reflex (Query, QueryResult, crop, Group(..), Additive)
+import Reflex (Query, QueryResult, crop, Group(..))
 import Data.Monoid.DecidablyEmpty
 import GHC.TypeLits
 
@@ -35,7 +36,7 @@ emptyToNothing a = if isEmpty a then Nothing else Just a
 mapMonoidMap :: DecidablyEmpty b => (a -> b) -> MonoidMap k a -> MonoidMap k b
 mapMonoidMap f (MonoidMap a) = MonoidMap $ mapMaybe (emptyToNothing . f) a
 
-traverseMonoidMap :: (DecidablyEmpty b, Applicative f) => (a -> f b) -> MonoidMap k a -> f (MonoidMap k b)
+traverseMonoidMap :: (Ord k, DecidablyEmpty b, Applicative f) => (a -> f b) -> MonoidMap k a -> f (MonoidMap k b)
 traverseMonoidMap f (MonoidMap a) = MonoidMap <$> wither (fmap emptyToNothing . f) a
 
 instance (Ord k, DecidablyEmpty v) => DecidablyEmpty (MonoidMap k v) where
@@ -67,4 +68,4 @@ instance (Ord k, DecidablyEmpty a) => Monoid (MonoidMap k a) where
 instance (Ord k, DecidablyEmpty a, Group a) => Group (MonoidMap k a) where
   negateG (MonoidMap a) = MonoidMap $ fmap negateG a
 
-instance (Ord k, DecidablyEmpty a, Group a, Additive a) => Additive (MonoidMap k a)
+instance (Ord k, DecidablyEmpty a, Group a, Commutative a) => Commutative (MonoidMap k a)

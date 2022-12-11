@@ -1,9 +1,10 @@
 # Revision history for monoid-map
 
-## UNRELEASED
+## v0.2.0.0
 
 * Add support for DecidablyEmpty
 * Get rid of invalid Functor, Traversable, and Filterable instances; create TypeError for Functor instance
+* Use Commutative from commutative-semigroups instead of now-deprecated Additive from patch
 
 ## v0.1.1.0
 
