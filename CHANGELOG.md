@@ -1,5 +1,9 @@
 # Revision history for monoid-map
 
+## v0.2.0.0-r1
+
+* Loosen reflex version bound
+
 ## v0.2.0.0
 
 * Add support for DecidablyEmpty
