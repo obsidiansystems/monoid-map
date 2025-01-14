@@ -1,6 +1,6 @@
 cabal-version:      2.4
 name:               monoid-map
-version:            0.2.0.0
+version:            0.2.0.1
 synopsis:           A monoidal map with the right group instance
 description:
   Newtype wrapper around 'Data.Map.Monoidal.MonoidalMap' that has a correct
