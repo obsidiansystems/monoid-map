@@ -17,7 +17,6 @@ module Data.MonoidMap where
 import Data.Semigroup.Commutative
 import Data.Map.Monoidal (MonoidalMap)
 import qualified Data.Map.Monoidal as Map
-import Data.Semigroup (Semigroup, (<>))
 import Reflex (Query, QueryResult, crop, Group(..))
 import Data.Monoid.DecidablyEmpty
 import GHC.TypeLits
