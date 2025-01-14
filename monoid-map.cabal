@@ -33,7 +33,7 @@ library
     , commutative-semigroups >= 0.1 && < 0.2
     , monoidal-containers  ^>=0.6
     , reflex               >=0.8 && < 1
-    , witherable           >=0.3 && <0.5
+    , witherable           >=0.4 && <0.5
     , patch                >=0.0.8.0 && < 0.1
 
   hs-source-dirs:   src

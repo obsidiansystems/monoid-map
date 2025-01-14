@@ -14,7 +14,6 @@
 {-# LANGUAGE DataKinds #-}
 module Data.MonoidMap where
 
-import Data.Witherable
 import Data.Semigroup.Commutative
 import Data.Map.Monoidal (MonoidalMap)
 import qualified Data.Map.Monoidal as Map
@@ -22,6 +21,7 @@ import Data.Semigroup (Semigroup, (<>))
 import Reflex (Query, QueryResult, crop, Group(..))
 import Data.Monoid.DecidablyEmpty
 import GHC.TypeLits
+import Witherable
 
 -- | Newtype wrapper around Data.Map.Monoidal.MonoidalMap
 newtype MonoidMap k v = MonoidMap { unMonoidMap :: MonoidalMap k v }
